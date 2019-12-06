@@ -100,7 +100,7 @@ if dataset =='cifar':
     # cifar-10 dataset 
     trainset = datasets.CIFAR10Instance(root='./data', train=True, download=True, transform=transform_train)
     trainloader = torch.utils.data.DataLoader(trainset, 
-        batch_size=args.batch_size, shuffle=True, num_workers=4,drop_last =True)
+        batch_size=args.batch_size, shuffle=True, num_workers=4, drop_last=True)
 
     testset = datasets.CIFAR10Instance(root='./data', train=False, download=True, transform=transform_test)
     testloader = torch.utils.data.DataLoader(testset, 
